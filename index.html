@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Frezowanie CNC Śmigiel - metale, tworzywa techniczne, pojedyncze sztuki i serie | ANMAR</title>
+<meta name="description" content="ANMAR, Koszanowo k. Śmigla: frezowanie CNC pojedynczych sztuk i dużych serii ze stali, aluminium, mosiądzu, miedzi, tworzyw technicznych i drewna. Detale z rysunku, bryły 3D albo wzoru. Tel. 724 510 806.">
+<meta name="theme-color" content="#E2001A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-m-640.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-640.webp 640w, img/hero-m-720.webp 720w, img/hero-m-840.webp 840w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-d-1440.webp" imagesrcset="img/hero-d-960.webp 960w, img/hero-d-1440.webp 1440w, img/hero-d-1920.webp 1920w, img/hero-d-2400.webp 2400w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/saira-rdzen.woff2" crossorigin>
+<style>
+@font-face{font-family:Saira;font-weight:100 900;font-display:swap;src:url(fonts/saira-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
+@font-face{font-family:Saira;font-weight:100 900;font-display:swap;src:url(fonts/saira-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Saira fb";src:local("Arial");size-adjust:98%;ascent-override:96%;descent-override:26%}
+/* kolory dokladnie z logo: czerwien #E2001A i czern #000; grafit #2E2F31 z ich obecnej strony */
+:root{--r:#E2001A;--r-d:#B80015;--bk:#000;--ink:#16171A;--mut:#4F525A;--gr:#2E2F31;--g:#F1F2F4;--line:#D9DBE0;--hh:74px;--w:min(calc(100vw - 32px),1720px);--F:Saira,"Saira fb",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--F);font-size:clamp(16px,.22vw + 15px,19px);line-height:1.6;color:var(--ink);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:700;line-height:1.05;letter-spacing:-.015em;color:var(--bk)}
+p{margin:0}
+.wrap{width:var(--w);margin:0 auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:8px;z-index:99;background:#fff;padding:8px 12px}
+/* motyw: podwojny szewron z logo = kierunek posuwu narzedzia; naroznik sciety pod katem szewronu */
+.chev{display:inline-block;width:26px;height:20px;flex:none;background:currentColor;clip-path:polygon(40% 0,62% 0,22% 50%,62% 100%,40% 100%,0 50%,40% 0,78% 0,100% 0,60% 50%,100% 100%,78% 100%,38% 50%,78% 0)}
+.cut{clip-path:polygon(28px 0,100% 0,100% 100%,0 100%,0 28px)}
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:56px;padding:0 28px 0 24px;background:var(--r);color:#fff;font:700 1.08rem/1 var(--F);text-decoration:none;border:0;cursor:pointer;transition:background .2s;clip-path:polygon(16px 0,100% 0,100% 100%,0 100%,0 16px)}
+.btn:hover{background:var(--r-d)}
+.btn:focus-visible{outline:3px solid var(--bk);outline-offset:3px}
+.btn .chev{width:18px;height:14px;transform:scaleX(-1)}
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;background:#fff;transition:box-shadow .2s}
+.top.sc{box-shadow:0 1px 0 var(--line),0 6px 20px rgba(0,0,0,.07)}
+.top .wrap{display:flex;align-items:center;gap:24px;height:var(--hh)}
+.logo{display:block;flex:none}
+.logo img{height:40px;width:auto}
+.menu{display:flex;align-items:center;gap:clamp(18px,1.8vw,38px);margin-left:auto;font:600 1.04rem/1 var(--F)}
+.menu a{text-decoration:none;color:var(--ink);padding:10px 0;position:relative}
+.menu a:hover,.menu a.on{color:var(--r)}
+.menu a.on::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:3px;background:var(--r)}
+.tel{font:700 1.14rem/1 var(--F);color:var(--bk);text-decoration:none;white-space:nowrap}
+.tel small{display:block;font:500 .74rem/1.2 var(--F);color:var(--mut);margin-bottom:3px}
+.top .btn{min-height:48px;font-size:1rem;padding:0 22px}
+.burger{display:none;width:48px;height:48px;border:0;background:none;padding:12px;cursor:pointer}
+.burger span{display:block;height:2px;background:var(--bk);margin:6px 0;transition:transform .2s,opacity .2s}
+/* hero: ich seria frezowanych detali z PE; dol sciety w szewron wskazujacy dalej */
+.hero{position:relative;overflow:hidden;background:#24262a;color:#fff;display:flex;flex-direction:column;min-height:calc(100svh - var(--hh));clip-path:polygon(0 0,100% 0,100% calc(100% - 56px),50% 100%,0 calc(100% - 56px))}
+.hero .ph{position:absolute;inset:0}
+.hero .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(14,15,17,.86) 0%,rgba(14,15,17,.62) 42%,rgba(14,15,17,.12) 78%),linear-gradient(0deg,rgba(14,15,17,.55),rgba(14,15,17,0) 45%)}
+.hero .wrap{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:56px 0 110px}
+.hero h1{color:#fff;font-size:clamp(2.3rem,4.4vw,5.1rem);font-weight:700;max-width:13.5em;line-height:1.02}
+.hero h1 b{display:block;font-weight:700}
+.hero .lead{margin-top:22px;max-width:36em;font-size:clamp(1.05rem,.5vw + .9rem,1.35rem);line-height:1.5;color:#E9EAED}
+.hero .akc{display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;margin-top:34px}
+.hero .ht{font:700 1.3rem/1.1 var(--F);color:#fff;text-decoration:none}
+.hero .ht small{display:block;font:500 .8rem/1.3 var(--F);color:#C9CBD1}
+.hero .znak{display:flex;gap:6px;color:var(--r);margin-bottom:26px}
+.hero .znak .chev{width:34px;height:26px}
+/* sekcje */
+section{position:relative}
+.sek{padding:clamp(64px,7vw,120px) 0}
+.sek-g{background:var(--g)}
+.glowa{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 48px;margin-bottom:clamp(30px,3.4vw,54px)}
+.glowa h2{font-size:clamp(1.9rem,2.9vw,3.3rem);max-width:17em}
+.glowa p{max-width:40em;color:var(--mut)}
+/* materialy */
+.mat{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.4vw,26px)}
+.mat article{background:#fff;display:flex;flex-direction:column}
+.mat .f{aspect-ratio:4/3;overflow:hidden;background:#d9dbe0}
+.mat .f img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.mat article:hover .f img{transform:scale(1.04)}
+.mat .t{padding:22px 24px 26px;border-top:4px solid var(--r)}
+.mat h3{font-size:1.45rem;display:flex;align-items:center;gap:12px}
+.mat h3 .chev{width:18px;height:14px;color:var(--r)}
+.mat p{margin-top:8px;color:var(--mut)}
+/* praca */
+.praca{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(30px,5vw,96px);align-items:start}
+.praca h2{font-size:clamp(1.9rem,2.9vw,3.3rem)}
+.praca .txt p{margin-top:18px;color:var(--mut);max-width:38em}
+.lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.lista li{display:grid;grid-template-columns:34px 1fr;gap:6px 14px;padding:20px 0;border-bottom:1px solid var(--line)}
+.lista .chev{color:var(--r);width:22px;height:17px;margin-top:6px}
+.lista b{display:block;font-size:1.15rem;color:var(--bk)}
+.lista span{color:var(--mut)}
+/* park maszynowy: ciemny grafit z ich strony */
+.park{background:var(--gr);color:#fff}
+.park h2{color:#fff}
+.park .glowa p{color:#C9CBD1}
+.masz{display:grid;grid-template-columns:1fr 1fr;gap:clamp(14px,1.6vw,28px)}
+.masz article{background:#38393C;padding:clamp(24px,2.6vw,44px)}
+.masz h3{color:#fff;font-size:clamp(1.35rem,1.5vw,1.8rem)}
+.masz .moc{margin-top:6px;color:#C9CBD1}
+.osie{display:grid;grid-template-columns:repeat(3,1fr);margin-top:28px;border-top:1px solid #55575C}
+.osie div{padding:18px 0 0}
+.osie div+div{padding-left:18px;border-left:1px solid #55575C}
+.osie dt{font:700 1rem/1 var(--F);color:var(--r);filter:brightness(1.35)}
+.osie dd{margin:8px 0 0;font:600 clamp(1.9rem,2.6vw,3rem)/1 var(--F);letter-spacing:-.02em}
+.osie dd small{font-size:.42em;font-weight:500;color:#C9CBD1;margin-left:4px}
+.park .dop{margin-top:28px;color:#C9CBD1;max-width:60em}
+/* realizacje */
+.tor{display:grid;grid-template-columns:repeat(8,1fr);gap:clamp(8px,.8vw,14px)}
+.tor button{all:unset;cursor:zoom-in;position:relative;display:block;aspect-ratio:1;overflow:hidden;background:#d9dbe0}
+.tor button:focus-visible{outline:3px solid var(--r);outline-offset:2px}
+.tor img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.tor button:hover img{transform:scale(1.05)}
+.tor span{position:absolute;left:0;bottom:0;background:rgba(0,0,0,.72);color:#fff;font:600 .82rem/1 var(--F);padding:7px 10px}
+.allegro{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px;margin-top:clamp(28px,3vw,48px);padding-top:28px;border-top:1px solid var(--line)}
+.allegro p{color:var(--mut)}
+.allegro a{font-weight:700;color:var(--bk)}
+/* zapytanie */
+.zap{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,96px);align-items:start}
+.zap h2{font-size:clamp(1.9rem,2.9vw,3.3rem)}
+.zap .txt>p{margin-top:18px;color:var(--mut)}
+.dane{margin-top:30px;display:grid;gap:18px}
+.dane div{border-left:4px solid var(--r);padding-left:16px}
+.dane small{display:block;color:var(--mut);font-size:.86rem}
+.dane a,.dane b{font-weight:700;font-size:1.2rem;color:var(--bk);text-decoration:none}
+form{background:#fff;padding:clamp(22px,2.6vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+form .c2{grid-column:1/-1}
+label{display:block;font-weight:600;font-size:.95rem;margin-bottom:6px;color:var(--bk)}
+input,select,textarea{width:100%;font:inherit;font-size:1rem;padding:13px 14px;border:1px solid #B9BCC4;border-radius:0;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--r);outline-offset:0;border-color:var(--r)}
+[aria-invalid=true]{border-color:var(--r);background:#FFF5F6}
+textarea{min-height:120px;resize:vertical}
+input[type=file]{padding:10px;background:var(--g)}
+.zg{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--mut);font-weight:400}
+.zg input{width:20px;height:20px;flex:none;margin-top:2px}
+#msg{grid-column:1/-1;background:var(--gr);color:#fff;padding:16px 18px}
+.uw{font-size:.85rem;color:var(--mut)}
+/* stopka */
+.stop{background:var(--bk);color:#C9CBD1;padding:clamp(48px,5vw,80px) 0 28px;font-size:.95rem}
+.stop .wrap>div:first-child{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.stop img{height:34px;width:auto}
+.stop h3{color:#fff;font-size:1.05rem;margin-bottom:12px}
+.stop a{color:#fff;text-decoration:none}
+.stop a:hover{text-decoration:underline}
+.stop p+p{margin-top:6px}
+.dol{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 30px;margin-top:44px;padding-top:22px;border-top:1px solid #2b2c30;font-size:.875rem}
+.dol a:hover{text-decoration:none}
+/* lightbox */
+#lb{position:fixed;inset:0;z-index:90;background:rgba(10,10,12,.94);display:none;align-items:center;justify-content:center}
+#lb.on{display:flex}
+#lb figure{margin:0;max-width:min(94vw,1200px);display:flex;flex-direction:column;align-items:center}
+#lb img{max-height:82vh;width:auto}
+#lb figcaption{color:#ddd;margin-top:10px;text-align:center}
+#lb button{position:absolute;width:52px;height:52px;border:0;background:rgba(255,255,255,.12);color:#fff;font:600 1.6rem/1 var(--F);cursor:pointer}
+#lb .x{top:14px;right:14px}#lb .p{left:14px;top:50%}#lb .n{right:14px;top:50%}
+#mob{display:none}
+ @media (max-width:1240px){
+  .menu .tel{display:none}
+  .mat{grid-template-columns:1fr 1fr}
+  .tor{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:980px){
+  :root{--hh:64px}
+  .logo img{height:32px}
+  .burger{display:block;margin-left:auto}
+  .menu{display:none;position:absolute;left:0;right:0;top:var(--hh);background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:6px 16px 20px;box-shadow:0 12px 24px rgba(0,0,0,.12);font-size:1.15rem}
+  .menu a{padding:15px 0;border-bottom:1px solid var(--line)}
+  .menu a.on::after{display:none}
+  .menu .tel{display:block;border:0;padding-top:18px}
+  .menu .btn{margin-top:14px;justify-content:center}
+  .top.open .menu{display:flex}
+  .top.open .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .top.open .burger span:nth-child(2){opacity:0}
+  .top.open .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+  .praca,.zap{grid-template-columns:1fr}
+  .masz{grid-template-columns:1fr}
+  .stop .wrap>div:first-child{grid-template-columns:1fr 1fr}
+  .stop .wrap>div:first-child>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  .hero{clip-path:polygon(0 0,100% 0,100% calc(100% - 30px),50% 100%,0 calc(100% - 30px))}
+  .hero::before{background:linear-gradient(0deg,rgba(14,15,17,.92) 0%,rgba(14,15,17,.78) 46%,rgba(14,15,17,.25) 80%,rgba(14,15,17,.1))}
+  .hero .wrap{justify-content:flex-end;padding:40px 0 62px}
+  .hero h1{font-size:clamp(2rem,8.6vw,2.6rem)}
+  .hero h1 b{display:inline}
+  .hero .lead{margin-top:14px;font-size:1.02rem}
+  .hero .akc{margin-top:26px;gap:16px 22px}
+  .hero .znak{margin-bottom:16px}
+  .hero .znak .chev{width:26px;height:20px}
+  .mat{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px;scroll-padding:0 16px;scrollbar-width:none}
+  .mat::-webkit-scrollbar{display:none}
+  .mat article{flex:0 0 82%;scroll-snap-align:start}
+  .tor{grid-template-columns:repeat(3,1fr)}
+  .osie dd{font-size:1.7rem}
+  form{grid-template-columns:1fr;padding:20px 16px;margin:0 -16px}
+  #mob{position:fixed;left:0;right:0;bottom:0;z-index:60;display:grid;grid-template-columns:1fr 1fr;transform:translateY(110%);transition:transform .25s}
+  #mob.widac{transform:none}
+  #mob a{display:flex;align-items:center;justify-content:center;min-height:54px;font:700 1rem/1 var(--F);text-decoration:none;background:var(--bk);color:#fff}
+  #mob a+a{background:var(--r)}
+}
+@media (max-width:420px){.osie dd{font-size:1.45rem}.osie div+div{padding-left:12px}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#start" aria-label="ANMAR - strona główna"><img src="img/logo.svg" width="233" height="46" alt="ANMAR"></a>
+    <nav class="menu" aria-label="Menu główne">
+      <a href="#materialy">Materiały</a>
+      <a href="#park">Park maszynowy</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="tel" href="tel:+48724510806"><small>Zadzwoń</small>724 510 806</a>
+      <a class="btn" href="#kontakt">Wyślij rysunek <i class="chev"></i></a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-label="Otwórz menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="tresc">
+<section class="hero" id="start">
+  <picture class="ph">
+    <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-640.webp 640w, img/hero-m-720.webp 720w, img/hero-m-840.webp 840w" sizes="100vw">
+    <img src="img/hero-d-1440.webp" srcset="img/hero-d-960.webp 960w, img/hero-d-1440.webp 1440w, img/hero-d-1920.webp 1920w, img/hero-d-2400.webp 2400w" sizes="100vw" width="2400" height="1443" alt="Seria detali z polietylenu frezowanych w ANMAR" fetchpriority="high">
+  </picture>
+  <div class="wrap">
+    <div class="znak" aria-hidden="true"><i class="chev"></i></div>
+    <h1>Frezowanie CNC w Śmiglu <b>od jednej sztuki po duże serie</b></h1>
+    <p class="lead">Stal, aluminium, mosiądz, miedź, tworzywa techniczne i drewno. Detale wykonujemy z Państwa rysunku, bryły 3D albo według wzoru.</p>
+    <div class="akc">
+      <a class="btn" href="#kontakt">Zapytaj o wycenę <i class="chev"></i></a>
+      <a class="ht" href="tel:+48724510806"><small>albo zadzwoń</small>724 510 806</a>
+    </div>
+  </div>
+</section>
+
+<section class="sek" id="materialy">
+  <div class="wrap">
+    <div class="glowa">
+      <h2>Z czego frezujemy</h2>
+      <p>Mamy wieloletnie doświadczenie w obróbce skrawaniem tworzyw technicznych (poliamid, POM, PCV, polietylen), stali oraz aluminium.</p>
+    </div>
+    <div class="mat">
+      <article><div class="f cut"><img src="img/k-metale.webp" width="530" height="398" loading="lazy" alt="Płyta z aluminium z frezowanymi gniazdami"></div><div class="t"><h3><i class="chev"></i>Metale</h3><p>Stal, aluminium, mosiądz i miedź. Płyty, korpusy, wsporniki, elementy maszyn.</p></div></article>
+      <article><div class="f cut"><img src="img/k-tworzywa.webp" width="533" height="400" loading="lazy" alt="Detale frezowane z tworzywa sztucznego"></div><div class="t"><h3><i class="chev"></i>Tworzywa sztuczne</h3><p>PE, POM, PA6, PVC i inne tworzywa techniczne, od pojedynczych elementów po serie.</p></div></article>
+      <article><div class="f cut"><img src="img/k-automotive.webp" width="533" height="400" loading="lazy" alt="Seria elementów z tworzywa do palet specjalistycznych"></div><div class="t"><h3><i class="chev"></i>Automotive</h3><p>Elementy do palet specjalistycznych, wykonywane seryjnie i powtarzalnie.</p></div></article>
+      <article><div class="f cut"><img src="img/k-drewno.webp" width="640" height="480" loading="lazy" alt="Ornament frezowany w drewnie"></div><div class="t"><h3><i class="chev"></i>Drewno</h3><p>Frezowanie kształtów i ornamentów w drewnie na podstawie projektu albo wzoru.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sek sek-g">
+  <div class="wrap praca">
+    <div class="txt">
+      <h2>Masz nietypowe zlecenie?</h2>
+      <p>Frezujemy pojedyncze sztuki i duże serie. Wystarczy rysunek, bryła 3D albo sam wzór detalu. Zadaj pytanie, a odpowiemy jak najszybciej z ofertą cenową.</p>
+      <p><a class="btn" href="#kontakt">Wyślij rysunek do wyceny <i class="chev"></i></a></p>
+    </div>
+    <ul class="lista">
+      <li><i class="chev"></i><div><b>Rysunek, bryła albo wzór</b><span>Pracujemy na dokumentacji klienta, a gdy jej nie ma, odwzorowujemy detal z próbki.</span></div></li>
+      <li><i class="chev"></i><div><b>Program CAD/CAM</b><span>Ścieżki narzędzia przygotowujemy w programach CAD/CAM.</span></div></li>
+      <li><i class="chev"></i><div><b>Obróbka na CNC</b><span>Centrum obróbcze i frezarka CNC plus niezbędne zaplecze uzupełniające.</span></div></li>
+      <li><i class="chev"></i><div><b>Wycena</b><span>Każde zapytanie wyceniamy indywidualnie, według materiału, ilości i stopnia skomplikowania.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sek park" id="park">
+  <div class="wrap">
+    <div class="glowa">
+      <h2>Park maszynowy</h2>
+      <p>Większość prac wykonujemy na dwóch maszynach CNC. Zakresy przesuwów mówią, jak duży detal zmieścimy w jednym zamocowaniu.</p>
+    </div>
+    <div class="masz">
+      <article>
+        <h3>Centrum obróbcze CNC</h3>
+        <p class="moc">Moc wrzeciona 7,5 kW</p>
+        <dl class="osie"><div><dt>X</dt><dd>650<small>mm</small></dd></div><div><dt>Y</dt><dd>450<small>mm</small></dd></div><div><dt>Z</dt><dd>510<small>mm</small></dd></div></dl>
+      </article>
+      <article>
+        <h3>Frezarka CNC</h3>
+        <p class="moc">Moc wrzeciona 3 kW</p>
+        <dl class="osie"><div><dt>X</dt><dd>1000<small>mm</small></dd></div><div><dt>Y</dt><dd>430<small>mm</small></dd></div><div><dt>Z</dt><dd>200<small>mm</small></dd></div></dl>
+      </article>
+    </div>
+    <p class="dop">Oprócz tego mamy niezbędne zaplecze uzupełniające, a programy obróbki przygotowujemy w systemach CAD/CAM.</p>
+  </div>
+</section>
+
+<section class="sek" id="realizacje">
+  <div class="wrap">
+    <div class="glowa">
+      <h2>Realizacje</h2>
+      <p>Zdjęcia z kilku zleceń. To tylko niewielka część wykonanych detali.</p>
+    </div>
+    <div class="tor" id="galeria">
+      <button type="button" data-lb="gal" data-src="img/g00-xl.webp" data-cap="Detal frezowany CNC: aluminium"><img src="img/g00-s.webp" srcset="img/g00-s.webp 240w, img/g00.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: aluminium"><span>Aluminium</span></button>
+      <button type="button" data-lb="gal" data-src="img/g01-xl.webp" data-cap="Detal frezowany CNC: aluminium"><img src="img/g01-s.webp" srcset="img/g01-s.webp 240w, img/g01.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: aluminium"><span>Aluminium</span></button>
+      <button type="button" data-lb="gal" data-src="img/g02-xl.webp" data-cap="Detal frezowany CNC: tworzywo techniczne"><img src="img/g02-s.webp" srcset="img/g02-s.webp 240w, img/g02.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: tworzywo techniczne"><span>Tworzywo techniczne</span></button>
+      <button type="button" data-lb="gal" data-src="img/g03-xl.webp" data-cap="Detal frezowany CNC: aluminium"><img src="img/g03-s.webp" srcset="img/g03-s.webp 240w, img/g03.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: aluminium"><span>Aluminium</span></button>
+      <button type="button" data-lb="gal" data-src="img/g04-xl.webp" data-cap="Detal frezowany CNC: tworzywo techniczne"><img src="img/g04-s.webp" srcset="img/g04-s.webp 240w, img/g04.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="477" height="477" loading="lazy" alt="Detal frezowany CNC: tworzywo techniczne"><span>Tworzywo techniczne</span></button>
+      <button type="button" data-lb="gal" data-src="img/g05-xl.webp" data-cap="Detal frezowany CNC: metal"><img src="img/g05-s.webp" srcset="img/g05-s.webp 240w, img/g05.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="460" height="460" loading="lazy" alt="Detal frezowany CNC: metal"><span>Metal</span></button>
+      <button type="button" data-lb="gal" data-src="img/g06-xl.webp" data-cap="Detal frezowany CNC: tworzywo techniczne"><img src="img/g06-s.webp" srcset="img/g06-s.webp 240w, img/g06.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: tworzywo techniczne"><span>Tworzywo techniczne</span></button>
+      <button type="button" data-lb="gal" data-src="img/g07-xl.webp" data-cap="Detal frezowany CNC: stal"><img src="img/g07-s.webp" srcset="img/g07-s.webp 240w, img/g07.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: stal"><span>Stal</span></button>
+      <button type="button" data-lb="gal" data-src="img/g08-xl.webp" data-cap="Detal frezowany CNC: tworzywo z łożyskiem"><img src="img/g08-s.webp" srcset="img/g08-s.webp 240w, img/g08.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="479" height="479" loading="lazy" alt="Detal frezowany CNC: tworzywo z łożyskiem"><span>Tworzywo z łożyskiem</span></button>
+      <button type="button" data-lb="gal" data-src="img/g09-xl.webp" data-cap="Detal frezowany CNC: tworzywo techniczne"><img src="img/g09-s.webp" srcset="img/g09-s.webp 240w, img/g09.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: tworzywo techniczne"><span>Tworzywo techniczne</span></button>
+      <button type="button" data-lb="gal" data-src="img/g10-xl.webp" data-cap="Detal frezowany CNC: stal"><img src="img/g10-s.webp" srcset="img/g10-s.webp 240w, img/g10.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: stal"><span>Stal</span></button>
+      <button type="button" data-lb="gal" data-src="img/g11-xl.webp" data-cap="Detal frezowany CNC: metal"><img src="img/g11-s.webp" srcset="img/g11-s.webp 240w, img/g11.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: metal"><span>Metal</span></button>
+      <button type="button" data-lb="gal" data-src="img/g12-xl.webp" data-cap="Detal frezowany CNC: tworzywo techniczne"><img src="img/g12-s.webp" srcset="img/g12-s.webp 240w, img/g12.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: tworzywo techniczne"><span>Tworzywo techniczne</span></button>
+      <button type="button" data-lb="gal" data-src="img/g13-xl.webp" data-cap="Detal frezowany CNC: stal"><img src="img/g13-s.webp" srcset="img/g13-s.webp 240w, img/g13.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="479" height="479" loading="lazy" alt="Detal frezowany CNC: stal"><span>Stal</span></button>
+      <button type="button" data-lb="gal" data-src="img/g14-xl.webp" data-cap="Detal frezowany CNC: tworzywo techniczne"><img src="img/g14-s.webp" srcset="img/g14-s.webp 240w, img/g14.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: tworzywo techniczne"><span>Tworzywo techniczne</span></button>
+      <button type="button" data-lb="gal" data-src="img/g15-xl.webp" data-cap="Detal frezowany CNC: tworzywo i aluminium"><img src="img/g15-s.webp" srcset="img/g15-s.webp 240w, img/g15.webp 480w" sizes="(max-width:760px) 31vw, (max-width:1240px) 24vw, 12vw" width="480" height="480" loading="lazy" alt="Detal frezowany CNC: tworzywo i aluminium"><span>Tworzywo i aluminium</span></button>
+    </div>
+    <div class="allegro">
+      <p>Znajdą nas Państwo także na Allegro: użytkownik <a href="https://allegro.pl/uzytkownik/ANMARTOOLS" rel="noopener">ANMARTOOLS</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sek sek-g" id="kontakt">
+  <div class="wrap zap">
+    <div class="txt">
+      <h2>Zapytanie o wycenę</h2>
+      <p>Opisz detal i dołącz rysunek albo plik 3D. Odpowiemy z ofertą cenową.</p>
+      <div class="dane">
+        <div><small>Telefon</small><a href="tel:+48724510806">724 510 806</a></div>
+        <div><small>E-mail</small><a href="mailto:office@anmartools.pl">office@anmartools.pl</a></div>
+        <div><small>Adres</small><b>ANMAR, ul. Polna 6, Koszanowo<br>64-030 Śmigiel</b></div>
+        <div><small>Dojazd</small><a href="https://www.google.com/maps/search/?api=1&amp;query=Koszanowo+Polna+6+64-030+%C5%9Amigiel" rel="noopener">Otwórz w Mapach Google</a></div>
+      </div>
+    </div>
+    <form id="form" novalidate>
+      <div><label for="f-imie">Imię i nazwisko lub firma</label><input id="f-imie" name="imie" autocomplete="name" required></div>
+      <div><label for="f-tel">Telefon lub e-mail</label><input id="f-tel" name="kontakt" autocomplete="tel" required></div>
+      <div><label for="f-mat">Materiał</label><select id="f-mat" name="material"><option>Stal</option><option>Aluminium</option><option>Mosiądz lub miedź</option><option>Tworzywo (PE, POM, PA6, PVC)</option><option>Drewno</option><option>Nie wiem, proszę o doradztwo</option></select></div>
+      <div><label for="f-szt">Liczba sztuk</label><input id="f-szt" name="sztuk" inputmode="numeric" placeholder="np. 1, 50, 2000"></div>
+      <div class="c2"><label for="f-plik">Rysunek lub plik 3D (PDF, DXF, STEP)</label><input id="f-plik" name="plik" type="file" accept=".pdf,.dxf,.dwg,.step,.stp,.igs,.jpg,.png"></div>
+      <div class="c2"><label for="f-opis">Opis detalu</label><textarea id="f-opis" name="opis" placeholder="Wymiary, tolerancje, termin"></textarea></div>
+      <label class="zg c2"><input type="checkbox" required> Zgadzam się na kontakt w sprawie zapytania.</label>
+      <div class="c2"><button class="btn" type="submit">Wyślij zapytanie <i class="chev"></i></button></div>
+      <p id="msg" hidden>To podgląd strony, formularz niczego nie wysyła. Na docelowej stronie zapytanie trafi na office@anmartools.pl.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="stop">
+  <div class="wrap">
+    <div>
+      <div><img src="img/logo-biale.svg" width="233" height="46" alt="ANMAR"><p style="margin-top:16px">Frezowanie CNC pojedynczych sztuk i serii: metale, tworzywa techniczne, drewno.</p></div>
+      <div><h3>Kontakt</h3><p><a href="tel:+48724510806">724 510 806</a></p><p><a href="mailto:office@anmartools.pl">office@anmartools.pl</a></p></div>
+      <div><h3>Adres</h3><p>ul. Polna 6, Koszanowo</p><p>64-030 Śmigiel</p></div>
+      <div><h3>Na stronie</h3><p><a href="#materialy">Materiały</a></p><p><a href="#park">Park maszynowy</a></p><p><a href="#realizacje">Realizacje</a></p></div>
+    </div>
+    <div class="dol"><span>© <span id="rok">2026</span> ANMAR</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=anmartools.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+  </div>
+</footer>
+
+<div id="mob"><a href="tel:+48724510806">Zadzwoń</a><a href="#kontakt">Wycena</a></div>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie"><figure><img alt=""><figcaption></figcaption></figure><button class="x" type="button" aria-label="Zamknij">×</button><button class="p" type="button" aria-label="Poprzednie">‹</button><button class="n" type="button" aria-label="Następne">›</button></div>
+<script src="app.js" defer></script>
+</body>
+</html>
